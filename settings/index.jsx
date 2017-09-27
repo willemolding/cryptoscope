@@ -59,7 +59,7 @@ class AddNewPair extends React.Component {
           label="Base Currency/Exchange"
           options={this.state.baseOptions}
           onSelection={function(e) {
-            this.setState(value: e.values[0]);
+            this.setState({value: e.values[0]});
           }
         }
         />
@@ -89,4 +89,3 @@ function mySettings(props) {
 
 
 registerSettingsPage(mySettings);
-
