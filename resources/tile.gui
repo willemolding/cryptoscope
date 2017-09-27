@@ -23,7 +23,7 @@
       <text class="nowprice" x="96%" y="79%" font-size="65" text-anchor="end"></text>
       <text class="updated" x="34.7%" y="91%" font-size="12" text-anchor="start"></text>
 
-      <svg class="pricechange_box" x="5%" y="45%" width="16%" height="60%">
+      <rect class="pricechange_box" x="5%" y="45%" width="16%" height="60%">
         <g transform="scale(1.1 1.1) translate(0 7)">
           <rect x="0"  y="0" width="100%" height="100%" fill="#1c1c1c"/>	
           <image class="priceup" x="17%" y="-20%" width="56%" height="60%" href="resources/tri_grey_up.png"/>
@@ -32,7 +32,7 @@
           <image class="days_box" x="14.5%" y="35%" width="62%" height="62%" href="resources/rounded_rect.png"/>
           <text class="days" x="46%" y="69.5%" font-size="14" text-anchor="middle"></text>
         </g>
-      </svg>
+      </rect>
     </symbol>
    </defs>
 </svg>
