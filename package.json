@@ -1,0 +1,12 @@
+{
+  "fitbit": {
+    "appUUID": "aa130df2-ac1e-449b-ac82-5ffc45401fde",
+    "appType": "app",
+    "appDisplayName": "CryptoScope",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_internet"
+    ]
+  }
+}
