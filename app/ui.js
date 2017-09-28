@@ -22,15 +22,15 @@ export function UI() {
 
 	var updateTile = function(tile, tileState) {
 		// contains the logic for setting the correct tile values with data from the state
-    tile.getElementById("nowprice").innerText = tileState.fsym;
-    tile.getElementById("cointext").innerText = tileState.tsym;
-    tile.getElementById("valuetext").innerText = tileState.priceText;
-    tile.getElementById("updated").innerText = tileState.lastUpdatedText;
-    // tile.getElementById("pricechange_text");
-    // tile.getElementById("priceup");
-    // tile.getElementById("pricedown");
-    // tile.getElementById("days");
-    // tile.getElementById("icon");
+	    tile.getElementById("nowprice").innerText = tileState.fsym;
+	    tile.getElementById("cointext").innerText = tileState.tsym;
+	    tile.getElementById("valuetext").innerText = tileState.priceText;
+	    tile.getElementById("updated").innerText = tileState.lastUpdatedText;
+	    // tile.getElementById("pricechange_text");
+	    // tile.getElementById("priceup");
+	    // tile.getElementById("pricedown");
+	    // tile.getElementById("days");
+	    // tile.getElementById("icon");
 	};
 
 	var displayLoaded = function(tileStates) {
