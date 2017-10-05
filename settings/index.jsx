@@ -1,9 +1,9 @@
-import * as api from "../common/api.js";
+import * as api from "../companion/api.js";
 
 console.log("Opening Settings page");
 
 
-class AddNewPair extends React.Component {
+class AddNewPair extends Component {
 
   constructor(props) {
     super(props);

@@ -8,32 +8,26 @@
 }
 
 text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "System-Regular"; 
+    fill: white;
 }
 
 .cointext { 
-    font-weight: bold;
-    fill: white;
+    font-family: "System-Bold";
 }
 
 .slash { 
     fill: #f9990d;
 }
 
-.valuetext { 
-    fill: white;
-}
-
 .nowprice { 
-    font-weight: bold;
+    font-family: "System-Bold";
     fill: white;
-    letter-spacing: 2.5px;
 }
 
 .updated { 
     fill: #a1a1a1;
     opacity: 0.7;
-    letter-spacing: 1.1px;
 }
 
 /*price up color is #5eaa29 and down is #b73709. Greyed out is #303030 NOTE: this was changed slightly with PNG triangles*/ 
@@ -43,16 +37,6 @@ text {
 }
 
 .days { 
-    font-weight: bold;
+    font-family: "System-Bold";
     fill: black;
-}
-
-.iconholder_spin {
-    stroke-opacity:0.4;
-}
-
-/* when price arrows are greyed out, subtle opacity should be added to make them stand out less like the following */
-
-.pricedown {
-    opacity: 0.6;
 }

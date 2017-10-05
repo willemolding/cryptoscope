@@ -1,30 +1,20 @@
-/*
- * Entry point for the watch app
- */
-
 import * as messaging from "messaging";
+import { display } from "display";
 import { UI } from "./ui.js";
 import * as ds from "../common/data_structures.js";
 
-console.log("App Started");
+
+display.autoOff = false;
+display.on = true;
 var ui = new UI();
-
-ui.updateUI(new InterfaceState("disconnected", []));
-
-
-// Helpful to check whether we are connected or not.
-setInterval(function() {
-	console.log("App running - Connectivity status=" + messaging.peerSocket.readyState +
-							" Connected? " + (messaging.peerSocket.readyState == messaging.peerSocket.OPEN ? "YES" : "no"));
-}, 3000);
+// ui.updateUI(new ds.InterfaceState("disconnected", []));
 
 
 // Listen for the onopen event
 messaging.peerSocket.onopen = function() {
 	// Ready to send or receive messages
-	ui.updateUI(new InterfaceState("loading", []));
+	// ui.updateUI(new ds.InterfaceState("loading", []));
 	console.log("Socket opened");
-	messaging.peerSocket.send("Hi!");
 }
 
 // Listen for the onmessage event
@@ -38,5 +28,5 @@ messaging.peerSocket.onmessage = function(evt) {
 messaging.peerSocket.onerror = function(err) {
 	// Handle any errors
 	console.log("Connection error: " + err.code + " - " + err.message);
-	ui.updateUI(new InterfaceState("error", []));
+	// ui.updateUI(new ds.InterfaceState("error", []));
 }
