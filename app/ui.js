@@ -31,6 +31,7 @@ export function UI() {
     // tile.getElementById("pricedown");
     // tile.getElementById("days");
     tile.getElementById("icon").setAttribute("href", "resources/icons/"+tileState.fsym.toLowerCase()+".svg");
+
 	};
 
 	var displayLoaded = function(tileStates) {
