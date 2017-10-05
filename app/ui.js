@@ -8,7 +8,11 @@ UI.prototype.updateTile = function(tileState) {
   document.getElementById("valuetext").innerText = tileState.fsym;
   document.getElementById("cointext").innerText = tileState.tsym;
   document.getElementById("nowprice").innerText = tileState.price;
-  tile.getElementById("updated").innerText = tileState.lastUpdatedText;
+  
+  let now = new Date();
+	let time = now.getHours() + ":" + now.getMinutes();
+	let date = now.toLocaleString("en-us");
+	document.getElementById("updated").innerText = "Last updated: " + time + "," + " " + date;
   // tile.getElementById("pricechange_text");
   // tile.getElementById("priceup");
   // tile.getElementById("pricedown");
