@@ -7,13 +7,13 @@ import * as ds from "../common/data_structures.js";
 display.autoOff = false;
 display.on = true;
 var ui = new UI();
-ui.updateUI(new ds.InterfaceState("disconnected", []));
+// ui.updateUI(new ds.InterfaceState("disconnected", []));
 
 
 // Listen for the onopen event
 messaging.peerSocket.onopen = function() {
 	// Ready to send or receive messages
-	ui.updateUI(new ds.InterfaceState("loading", []));
+	// ui.updateUI(new ds.InterfaceState("loading", []));
 	console.log("Socket opened");
 }
 
@@ -28,5 +28,5 @@ messaging.peerSocket.onmessage = function(evt) {
 messaging.peerSocket.onerror = function(err) {
 	// Handle any errors
 	console.log("Connection error: " + err.code + " - " + err.message);
-	ui.updateUI(new ds.InterfaceState("error", []));
+	// ui.updateUI(new ds.InterfaceState("error", []));
 }

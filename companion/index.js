@@ -32,7 +32,7 @@ function fetchAndSendData() {
     console.log("request success");
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       // Send the data to peer as a message
-      messaging.peerSocket.send(new ds.InterfaceState("loaded", new ds.TileState()));
+      messaging.peerSocket.send(new ds.InterfaceState("loaded", [data]));
     }
   })
   .catch(function(err) {

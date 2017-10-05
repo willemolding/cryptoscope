@@ -1,10 +1,10 @@
 <svg>  
   <!--   Backdrop and text fields --> 
   <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
-  <text class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
+  <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
   <text class="slash" x="62.5%" y="40%" font-size="72" text-anchor="start">/</text>
-  <text class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
-  <text class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">$5100.10</text>
+  <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
+  <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">$5100.10</text>
   <text class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">Last updated: 11:05 4-Oct</text>
    
   <!--   Icon holder -->
