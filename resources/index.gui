@@ -19,5 +19,4 @@
   <text class="pricechange_text" x="37" y="70%-4" font-size="18" text-anchor="middle">+7.1%</text>
   <image class="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
   <text class="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
-  
 </svg>

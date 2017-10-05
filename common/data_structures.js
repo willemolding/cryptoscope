@@ -1,12 +1,8 @@
 
 // This is a prototype for an object that should contain all the data required to update a single tile in tile.gui
 // add fields to this as required
-export function TileState(fsym, tsym, priceText, percentChanges, lastUpdatedText) {
-  this.fsym = fsym;
-  this.tsym = tsym;
-  this.priceText = priceText;
-  this.percentChanges = percentChanges;
-  this.lastUpdatedText = lastUpdatedText;
+export function TileState(title) {
+  this.title 
 }
 
 

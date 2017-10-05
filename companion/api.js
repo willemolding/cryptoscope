@@ -1,7 +1,7 @@
 
 var base_url = "https://www.cryptocompare.com/api/data/";
 var min_base_url = "https://min-api.cryptocompare.com/data/";
-var coin_market_cap_url = "https://api.coinmarketcap.com/v1/ticker/?limit=200";
+var coin_market_cap_url = "https://api.coinmarketcap.com/v1/ticker/?limit=100";
 
 var coinlist_url = base_url+"coinlist/";
 var coinsubscriptions_url = base_url+"coinsnapshotfullbyid?";
@@ -52,6 +52,7 @@ export function getCoinRankings() {
 // Retuns a list of all available coins, their name, symbol and id
 export function getCoinList() {
 
+  console.log("about to get coin data");
 	var getCoinData = fetch(coinlist_url)
 	.then(handleErrors)
 	.then(function(response) {
@@ -123,7 +124,6 @@ export function getPrice(sub) {
 		return response.json();
 	})
 	.then(function(json) {
-		console.log(json)
 		var price = json[sub.tsym];
 		return price;
 	});
