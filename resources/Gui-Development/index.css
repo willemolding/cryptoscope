@@ -1,0 +1,83 @@
+div.ionic {
+    display: block;
+    width: 440px;
+    height: 540px;
+    margin: 1rem auto;
+    position: relative;
+}
+
+div.ionic:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(./resources/Fitbit-Ionic.png) no-repeat top left;
+    background-size: 438px 540px;
+}
+
+div.ionic svg {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 122px;
+    left: 44px;
+}
+
+
+/*Add your own css definitions after here*/
+
+text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#cointext { 
+    font-weight: bold;
+    fill: white;
+}
+
+#slash { 
+    fill: #f9990d;
+}
+
+#valuetext { 
+    fill: white;
+}
+
+#nowprice { 
+    font-weight: bold;
+    fill: white;
+    letter-spacing: 2.5px;
+}
+
+#updated { 
+    fill: #a1a1a1;
+    opacity: 0.7;
+    letter-spacing: 1.1px;
+}
+
+/*price up color is #5eaa29 and down is #b73709. Greyed out is #303030 NOTE: this was changed slightly with PNG triangles*/ 
+
+#pricechange_text {
+    fill: #a1a1a1;
+}
+
+#days { 
+    font-weight: bold;
+    fill: black;
+}
+
+#iconholder_spin {
+    stroke-opacity:0.4;
+}
+
+/* when price arrows are greyed out, subtle opacity should be added to make them stand out less like the following */
+
+#pricedown {
+    opacity: 0.6;
+}
+
+
+/*...*/
