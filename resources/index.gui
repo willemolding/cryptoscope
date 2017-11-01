@@ -1,22 +1,39 @@
 <svg>  
-  <!--   Backdrop and text fields --> 
-  <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
-  <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
-  <text class="slash" x="62.5%" y="40%" font-size="72" text-anchor="start">/</text>
-  <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
-  <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">$5100.10</text>
-  <text class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">Last updated: 11:05 4-Oct</text>
-   
-  <!--   Icon holder -->
-  <circle class="iconholder" cx="0%" cy="0%" r="120" fill="#ffffff"/>
-  <arc x="-120" y="-120" width="240" height="240" fill="#f9990d" arc-width="10" start-angle="0" sweep-angle="360"/>
-  <image class="icon" x="-2%" y="3%" width="25%" height="25%" href="ARK.png"/>
+  <defs>
+    <symbol id="tile">
+      <!--   Backdrop and text fields --> 
+      <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
+      <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
+      <text class="slash" x="62.5%" y="40%" font-size="72" text-anchor="start">/</text>
+      <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
+      <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">$5100.10</text>
+      <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">Last updated: 11:05 4-Oct</text>
+
+      <!--   Icon holder -->
+      <circle class="iconholder" cx="0%" cy="0%" r="120" fill="#ffffff"/>
+      <arc x="-120" y="-120" width="240" height="240" fill="#f9990d" arc-width="10" start-angle="0" sweep-angle="360"/>
+      <image class="icon" x="-2%" y="3%" width="25%" height="25%" href="ARK.png"/>
+
+
+      <!--   Price change box -->
+      <image class="priceup" x="20" y="50%" width="35" height="26" href="tri_up.png" fill="green"/>
+      <image class="pricedown" x="20" y="70%+4" width="35" height="30" href="tri_down.png" fill="#303030"/>
+      <text class="pricechange_text" x="37" y="70%-4" font-size="18" text-anchor="middle">+7.1%</text>
+      <image class="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
+      <text class="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+    </symbol>
+  </defs>
   
   
-  <!--   Price change box -->
-  <image class="priceup" x="20" y="50%" width="35" height="26" href="tri_up.png" fill="green"/>
-  <image class="pricedown" x="20" y="70%+4" width="35" height="30" href="tri_down.png" fill="#303030"/>
-  <text class="pricechange_text" x="37" y="70%-4" font-size="18" text-anchor="middle">+7.1%</text>
-  <image class="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
-  <text class="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+  <use id="tileList" href="#tile-list" height="100%" width="100%">
+    <var id="reorder-enabled" value="0"/>
+    <var id="separator-height-bottom" value="2"/>
+
+    <use id="tile-0" href="#tile-list-item" class="tile">
+      <use href="#tile" />
+    </use>   
+    <use id="tile-1" href="#tile-list-item" class="tile">
+      <use href="#tile" />
+    </use>   
+  </use>
 </svg>
