@@ -1,33 +1,18 @@
-div.ionic {
-    display: block;
-    width: 440px;
-    height: 540px;
-    margin: 1rem auto;
-    position: relative;
+/* __PRICE TILE__ */
+/* Icon Holder */
+#iconholder-main {
+    transform-origin: centre;
+    transform: translate(-48%,-48%);
+}
+#iconholder-animate {
+    transform-origin: centre;
+    transform: translate(-42%,-42%);
 }
 
-div.ionic:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url(./resources/Fitbit-Ionic.png) no-repeat top left;
-    background-size: 438px 540px;
+/* Price change box */
+#daystext {
+    font-weight: bold;
 }
-
-div.ionic svg {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 122px;
-    left: 44px;
-}
-
-
-/*Add your own css definitions after here*/
 
 text {
     font-family: 'Open Sans', sans-serif;

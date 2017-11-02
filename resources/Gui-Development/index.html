@@ -6,34 +6,58 @@
 </head>
 <body>
   <div class="ionic">
-    <svg id="appSVG" width="348" height="250"> 
-      <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
-      <!-- Emulator -->
+    <svg id="appSVG" width="348" height="250">
       <svg>  
         <defs>
-          <symbol id="tile">
-            <!--   Backdrop and text fields --> 
+          <!-- Backdrop -->
+          <symbol id="backdrop">
             <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
-            <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
-            <text class="slash" x="62.5%" y="40%" font-size="72" text-anchor="start">/</text>
-            <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
-            <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">$5100.10</text>
-            <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">Last updated: 11:05 4-Oct</text>
-
-            <!--   Icon holder -->
-            <circle class="iconholder" cx="0%" cy="0%" r="120" fill="#ffffff"/>
-            <arc x="-120" y="-120" width="240" height="240" fill="#f9990d" arc-width="10" start-angle="0" sweep-angle="360"/>
-            <image class="icon" x="-2%" y="3%" width="25%" height="25%" href="ARK.png"/>
-
-            <!--   Price change box -->
-            <image class="priceup" x="20" y="50%" width="35" height="26" href="tri_up.png" fill="green"/>
-            <image class="pricedown" x="20" y="70%+4" width="35" height="30" href="tri_down.png" fill="#303030"/>
-            <text class="pricechange_text" x="37" y="70%-4" font-size="18" text-anchor="middle">+7.1%</text>
-            <image class="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
-            <text class="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
           </symbol>
+
+          <!-- Price tile -->
+          <symbol id="price-tile">
+            <!-- Text fields --> 
+            <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
+            <text id="slash" x="62.5%" y="40%" font-size="72" text-anchor="start">/</text>
+            <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
+            <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">5100.10</text>
+            <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">Last updated: 11:05 4-Oct</text>
+            <!-- Icon holder -->
+            <image id="iconholder-main" width="96%" height="96%" href="IconHolder_main.png"/>
+            <g transform="rotate(0 0 0)">
+              <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatDur="indefinite"/>
+              <image id="iconholder-animate" width="84%" height="84%" href="IconHolder_animate-stroke.png">
+            </g>
+            <image class="icon" x="-2%" y="3%" width="25%" height="25%" href="iot.png"/>
+            <!-- Price change box -->
+            <image id="priceup" x="9%" y="49.5%" width="11%" height="11%" href="tri_green_up.png" fill="green"/>
+            <text id="pricechange_text" x="15%" y="69%" font-size="15" text-anchor="middle" fill="#a1a1a1">+7.1%</text>
+            <image id="pricedown" x="9%" y="73.5%" width="11%" height="11%" href="tri_grey_down.png"/>
+            <image id="daysholder" x="9%" y="86%" width="11%" height="11%" href="rounded_rect.png"/>
+            <text id="daystext" x="14.5%" y="94%" font-size="15" text-anchor="middle" fill="#1c1c1c">1d</text>
+          </symbol>
+
+          <!-- Error tile -->
+          <symbol id="error-tile"/>
+
+          </symbol>
+
         </defs>
+
+        <!-- Price display -->
+        <use href="#backdrop"/>
+        <use href="#price-tile"/>
         
+        <!-- Error display -->
+        <!--
+        <use href="backdrop"/>
+        <use href="error-tile"/>
+        -->
+
+
+
+
+        <!-- Tile control -->
         <!--
         <use id="tileList" href="#tile-list" height="100%" width="100%">
           <var id="reorder-enabled" value="0"/>
@@ -47,7 +71,10 @@
           </use>   
         </use>
         -->
+
       </svg>
+      <!-- Move design to here END -->
+
     <!-- Emulator end -->  
     </svg>
   </div>
