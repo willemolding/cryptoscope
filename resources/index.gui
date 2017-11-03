@@ -1,6 +1,12 @@
 <svg>  
   <defs>
-    <symbol id="tile">
+
+        <!-- CryptoScope Icon -->
+    <symbol id="CryptoScope-icon">
+      <image class="icon" x="50%" y="5%" width="90%" height="90%" opacity="0.4" href="CryptoScope_400x400_Orig.png"/>
+    </symbol>
+
+    <symbol id="price-tile">
       <!--   Backdrop and text fields --> 
       <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
       <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
@@ -25,15 +31,17 @@
   </defs>
   
   
+  <use href="#CryptoScope-icon" opacity="0.4" transform="translate(15 -20)"/>
+
   <use id="tileList" href="#tile-list" height="100%" width="100%">
     <var id="reorder-enabled" value="0"/>
     <var id="separator-height-bottom" value="2"/>
 
     <use id="tile-0" href="#tile-list-item" class="tile">
-      <use href="#tile" />
+      <use href="#price-tile" />
     </use>   
     <use id="tile-1" href="#tile-list-item" class="tile">
-      <use href="#tile" />
+      <use href="#price-tile" />
     </use>   
   </use>
 </svg>
