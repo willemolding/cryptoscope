@@ -45,8 +45,9 @@ UI.prototype.updateTile = function(tile, tileState) {
   let priceup = tile.getElementById("priceup");
   let pricedown = tile.getElementById("pricedown");
   let days = tile.getElementById("days");
-  // tile.getElementById("icon").href = resources/icons/"+tileState.fsym.toLowerCase()+".png");
-  
+ 
+  tile.getElementById("icon").href = "logos/"+tileState.fsym.toUpperCase()+".png";
+
   // set the percent change 
   let change = tileState.percentChange["1day"];
   pricechageText.innerText = (change<0?'':'+') + change.toFixed(1) + "%";

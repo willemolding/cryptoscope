@@ -1,9 +1,8 @@
-<svg>  
+<svg viewport-fill="#1c1c1c">  
   <defs>
-                
+    
     <symbol id="price-tile">
       <!--   Backdrop and text fields --> 
-      <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
       <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">     </text>
       <text class="slash" x="62%" y="40%" font-size="72" text-anchor="start">/</text>
       <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">     </text>
@@ -11,6 +10,7 @@
 
       <!--   Price change box -->
       <text id="pricechange_text" class="pricechange_text" x="37" y="75%" font-size="25" text-anchor="middle">              </text>
+      <image id="icon" x="0" y="0" height="80" width="80" href="logos/BTC.png"/>
     </symbol>
   </defs>
   
@@ -20,6 +20,19 @@
       <animate attributeName="opacity" from="0" to="1" dur="3s"/>
     </image>
   </rect> -->
+    
+     <!--   Icon holder -->
+   <image id="iconholder-main" x="-126" y="-126" height="253" width="253" href="IconHolder_main.png"/>
+   <g>
+     <animateTransform attributeType="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+     <image id="iconholder-animate" x="-110" y="-110" height="220" width="220" href="IconHolder_animate-stroke.png"/>
+   </g>
+
+  <!--  Days Holder  -->
+  <image id="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
+  <text id="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+
+  <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">                                </text>
   
 
     <use id="tileList" href="#tile-list">
@@ -58,20 +71,6 @@
         <use href="#price-tile" />
       </use> 
     </use>
-
-   <!--   Icon holder -->
-   <image id="iconholder-main" x="-126" y="-126" height="253" width="253" href="IconHolder_main.png"/>
-   <g>
-     <animateTransform attributeType="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
-     <image id="iconholder-animate" x="-110" y="-110" height="220" width="220" href="IconHolder_animate-stroke.png"/>
-   </g>
-   <image class="icon" x="-2%" y="3%" height="25%" width="25%" href="ARK.png"/>
-
-  <!--  Days Holder  -->
-  <image id="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
-  <text id="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
-
-  <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">                                </text>
   
 
 </svg>
