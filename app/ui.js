@@ -70,6 +70,7 @@ UI.prototype.displayLoaded = function(tileStates) {
       tile.style.display = "none";
     }
   }
+  document.getElementById("loadingScreen").style.display = "none";
 };
 
 UI.prototype.displayDisconnected = function() {
@@ -77,6 +78,7 @@ UI.prototype.displayDisconnected = function() {
 };
 
 UI.prototype.displayLoading = function() {
+  
 };
 
 UI.prototype.displayError = function() {

@@ -30,9 +30,8 @@ text {
     opacity: 0.7;
 }
 
-/*price up color is #5eaa29 and down is #b73709. Greyed out is #303030 NOTE: this was changed slightly with PNG triangles*/ 
-
 .pricechange_text {
+    font-family: "System-Bold";
     fill: #a1a1a1;
 }
 
