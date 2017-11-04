@@ -21,21 +21,29 @@ messaging.peerSocket.onerror = function(err) {
 
 function fetchAndSendData() {
   // deals with getting the values from the settings store, calling the api, and sending the response to the watch
-  let sub = {
+  let subs = [{
     fsym : "LTC",
     tsym : "BTC",
     exchange : "BitTrex"
-  }
-
-  api.getCoinStatus(sub)
-  .then(function(data) {
-    console.log("request success");
+  },
+  {
+    fsym : "BTC",
+    tsym : "USD",
+    exchange : "BitTrex"
+  },
+  {
+    fsym : "NEO",
+    tsym : "BTC",
+    exchange : "BitTrex"
+  }];
+  
+  Promise.all(subs.map(api.getCoinStatus))
+  .then(function(tileStates) {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
-      // Send the data to peer as a message
-      messaging.peerSocket.send(new ds.InterfaceState("loaded", [data]));
+      messaging.peerSocket.send(new ds.InterfaceState("loaded", tileStates));
     }
   })
   .catch(function(err) {
     console.log(err);
-  });
+  });  
 }
