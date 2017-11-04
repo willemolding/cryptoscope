@@ -1,14 +1,6 @@
 <svg>  
   <defs>
-            
-<!--     <symbol id="loading-screen">
-      <image width="100%" height="100%" href="loading-screen-back.png"/>
-      <image width="100%" height="100%" href="loading-screen-icon.png">
-        <animate attributeName="opacity" from="0" to="1" dur="3s"/>
-      </image>
-    </symbol>
-       -->
-    
+                
     <symbol id="price-tile">
       <!--   Backdrop and text fields --> 
       <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
@@ -21,36 +13,45 @@
       <text id="pricechange_text" class="pricechange_text" x="37" y="75%" font-size="25" text-anchor="middle">              </text>
     </symbol>
   </defs>
+  
 
-  
-  <use id="tileList" href="#tile-list">
-<!--     <var id="reorder-enabled" value="1"/> -->
-    <var id="align-mode" value="1"/>
-    <var id="peek-enabled" value="0"/>
+  <rect id="priceScreen">
+      <use id="tileList" href="#tile-list">
+    <!--     <var id="reorder-enabled" value="1"/> -->
+        <var id="align-mode" value="1"/>
+        <var id="peek-enabled" value="0"/>
 
-    <use id="tile-0" href="#tile-list-item" class="tile">
-      <use href="#price-tile" />
-    </use>   
-    <use id="tile-1" href="#tile-list-item" class="tile">
-      <use href="#price-tile" />
-    </use>   
-    <use id="tile-2" href="#tile-list-item" class="tile">
-      <use href="#price-tile" />
-    </use> 
-  </use>
-  
- <!--   Icon holder -->
- <image id="iconholder-main" x="-126" y="-126" height="253" width="253" href="IconHolder_main.png"/>
- <g>
-   <animateTransform attributeType="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
-   <image id="iconholder-animate" x="-110" y="-110" height="220" width="220" href="IconHolder_animate-stroke.png"/>
- </g>
- <image class="icon" x="-2%" y="3%" height="25%" width="25%" href="ARK.png"/>
-  
-<!--  Days Holder  -->
-<image id="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
-<text id="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+        <use id="tile-0" href="#tile-list-item" class="tile">
+          <use href="#price-tile" />
+        </use>   
+        <use id="tile-1" href="#tile-list-item" class="tile">
+          <use href="#price-tile" />
+        </use>   
+        <use id="tile-2" href="#tile-list-item" class="tile">
+          <use href="#price-tile" />
+        </use> 
+      </use>
 
-<text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">                                </text>
+     <!--   Icon holder -->
+     <image id="iconholder-main" x="-126" y="-126" height="253" width="253" href="IconHolder_main.png"/>
+     <g>
+       <animateTransform attributeType="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+       <image id="iconholder-animate" x="-110" y="-110" height="220" width="220" href="IconHolder_animate-stroke.png"/>
+     </g>
+     <image class="icon" x="-2%" y="3%" height="25%" width="25%" href="ARK.png"/>
+
+    <!--  Days Holder  -->
+    <image id="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
+    <text id="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+
+    <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">                                </text>
+  </rect>
   
+  <rect id="loadingScreen">
+<!--     <image width="100%" height="100%" href="loading-screen-back.png"/>
+    <image width="100%" height="100%" href="loading-screen-icon.png">
+      <animate attributeName="opacity" from="0" to="1" dur="3s"/>
+    </image> -->
+  </rect>
+
 </svg>

@@ -55,6 +55,10 @@ UI.prototype.updateTile = function(tile, tileState) {
 
 UI.prototype.displayLoaded = function(tileStates) {
   
+  document.getElementById("priceScreen").style.display = "inline";
+  document.getElementById("loadingScreen").style.display = "none";
+
+  
   let now = new Date();
 	let time = now.getHours() + ":" + now.getMinutes();
 	let date = now.getDate() + "/" + (now.getMonth()+1);
@@ -76,7 +80,8 @@ UI.prototype.displayDisconnected = function() {
 };
 
 UI.prototype.displayLoading = function() {
-
+  document.getElementById("priceScreen").style.display = "none";
+  document.getElementById("loadingScreen").style.display = "inline";
 };
 
 UI.prototype.displayError = function() {
