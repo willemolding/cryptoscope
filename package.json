@@ -7,6 +7,11 @@
     "wipeColor": "#607d8b",
     "requestedPermissions": [
       "access_internet"
-    ]
+    ],
+    "i18n": {
+      "en": {
+        "name": "CryptoScope"
+      }
+    }
   }
 }

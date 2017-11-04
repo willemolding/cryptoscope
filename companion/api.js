@@ -80,8 +80,6 @@ export function getCoinList() {
 	});
 }
 
-
-
 // given a coins Id number returns the available subscriptions which contain the currency paired against and the exchange
 export function getCoinSubscriptions(id) {
 	var url = coinsubscriptions_url;
@@ -111,8 +109,6 @@ export function getCoinSubscriptions(id) {
 
 // get the most recent price 
 export function getPrice(sub) {
-	console.log(sub);
-
 	var url = price_url;
 	url += "fsym="+sub.fsym;
 	url += "&tsyms="+sub.tsym;

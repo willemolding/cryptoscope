@@ -1,47 +1,57 @@
 <svg>  
   <defs>
-
-        <!-- CryptoScope Icon -->
-    <symbol id="CryptoScope-icon">
-      <image class="icon" x="50%" y="5%" width="90%" height="90%" opacity="0.4" href="CryptoScope_400x400_Orig.png"/>
-    </symbol>
-
+                
     <symbol id="price-tile">
       <!--   Backdrop and text fields --> 
       <rect class="backdrop" x="0" y="0" width="100%" height="100%" fill="#1c1c1c"/>
-      <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">BTC</text>
-      <text class="slash" x="62.5%" y="40%" font-size="72" text-anchor="start">/</text>
-      <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">USD</text>
-      <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">$5100.10</text>
-      <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">Last updated: 11:05 4-Oct</text>
-
-      <!--   Icon holder -->
-      <circle class="iconholder" cx="0%" cy="0%" r="120" fill="#ffffff"/>
-      <arc x="-120" y="-120" width="240" height="240" fill="#f9990d" arc-width="10" start-angle="0" sweep-angle="360"/>
-      <image class="icon" x="-2%" y="3%" width="25%" height="25%" href="ARK.png"/>
-
+      <text id="cointext" class="cointext" x="61.5%" y="37%" font-size="44" text-anchor="end">     </text>
+      <text class="slash" x="62%" y="40%" font-size="72" text-anchor="start">/</text>
+      <text id="valuetext" class="valuetext" x="69.5%" y="37%" font-size="44" text-anchor="start">     </text>
+      <text id="nowprice" class="nowprice" x="95%" y="75%" font-size="58" text-anchor="end">                     </text>
 
       <!--   Price change box -->
-      <image class="priceup" x="20" y="50%" width="35" height="26" href="tri_up.png" fill="green"/>
-      <image class="pricedown" x="20" y="70%+4" width="35" height="30" href="tri_down.png" fill="#303030"/>
-      <text class="pricechange_text" x="37" y="70%-4" font-size="18" text-anchor="middle">+7.1%</text>
-      <image class="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
-      <text class="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+      <text id="pricechange_text" class="pricechange_text" x="37" y="75%" font-size="25" text-anchor="middle">              </text>
     </symbol>
   </defs>
   
+
+  <rect id="priceScreen">
+      <use id="tileList" href="#tile-list">
+    <!--     <var id="reorder-enabled" value="1"/> -->
+        <var id="align-mode" value="1"/>
+        <var id="peek-enabled" value="0"/>
+
+        <use id="tile-0" href="#tile-list-item" class="tile">
+          <use href="#price-tile" />
+        </use>   
+        <use id="tile-1" href="#tile-list-item" class="tile">
+          <use href="#price-tile" />
+        </use>   
+        <use id="tile-2" href="#tile-list-item" class="tile">
+          <use href="#price-tile" />
+        </use> 
+      </use>
+
+     <!--   Icon holder -->
+     <image id="iconholder-main" x="-126" y="-126" height="253" width="253" href="IconHolder_main.png"/>
+     <g>
+       <animateTransform attributeType="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+       <image id="iconholder-animate" x="-110" y="-110" height="220" width="220" href="IconHolder_animate-stroke.png"/>
+     </g>
+     <image class="icon" x="-2%" y="3%" height="25%" width="25%" href="ARK.png"/>
+
+    <!--  Days Holder  -->
+    <image id="daysholder" x="20" y="86%" width="35" height="25" href="rounded_rect.png" fill="#a1a1a1"/>
+    <text id="days" x="37" y="86%+18" font-size="18" text-anchor="middle">1d</text>
+
+    <text id="updated" class="updated" x="34.7%" y="93%" font-size="18" text-anchor="start">                                </text>
+  </rect>
   
-  <use href="#CryptoScope-icon" opacity="0.4" transform="translate(15 -20)"/>
+  <rect id="loadingScreen">
+<!--     <image width="100%" height="100%" href="loading-screen-back.png"/>
+    <image width="100%" height="100%" href="loading-screen-icon.png">
+      <animate attributeName="opacity" from="0" to="1" dur="3s"/>
+    </image> -->
+  </rect>
 
-  <use id="tileList" href="#tile-list" height="100%" width="100%">
-    <var id="reorder-enabled" value="0"/>
-    <var id="separator-height-bottom" value="2"/>
-
-    <use id="tile-0" href="#tile-list-item" class="tile">
-      <use href="#price-tile" />
-    </use>   
-    <use id="tile-1" href="#tile-list-item" class="tile">
-      <use href="#price-tile" />
-    </use>   
-  </use>
 </svg>
